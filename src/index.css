@@ -1,13 +1,134 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #1b1b32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width: 500px;
+  position: relative;
+} 
+
+.App h1 {
+  color: white;
+}
+
+.App input {
+  margin-top: 30px;
+  background-color: rgb(42, 42, 64);
+  outline: none;
+  border: 1px solid white;
+  font-size: 1.7rem;
+  padding: 8px 0 8px 10px;
+  color: white;
+}
+
+.checkButton {
+  background-color: #3b3b4f;
+  color: white;
+  border: 2px solid white;
+  height: 40px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 30px;
+}
+
+.message {
+  position: relative;
+}
+
+.App p {
+  margin-top: 5px;
+}
+
+.checkMark {
+  position: absolute;
+  right: -22px;
+  bottom: 0;
+  color: lightgreen;
+}
+
+.crossMark {
+  position: absolute;
+  right: -18px;
+  bottom: -2px;
+  color: rgb(255, 73, 73);
+}
+
+.descriptionBoxClosed {
+  position: absolute;
+  left: 600px;
+  top: 0;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 1s;
+  height: 50px;
+  overflow: hidden;
+  border: 0 solid transparent;
+  padding: 0 10px 10px 10px;
+}
+
+.descriptionBoxOpen {
+  position: absolute;
+  left: 600px;
+  top: 0;
+  width: 250px;
+  border: 2px solid white;
+  transition: 1s;
+  color: rgba(255, 255, 255, 0.841);
+  padding: 0 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 220px;
+}
+
+
+.descriptionBoxOpen p, .descriptionBoxClosed p{
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.descriptionBoxClosed .descriptionButton {
+  background-color: #3b3b4f;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  width: 200px;
+  min-height: 50px;
+  margin-bottom: 10px;
+}
+
+.descriptionBoxOpen .descriptionButton {
+  background-color: #3b3b4f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  width: 200px;
+  min-height: 50px;
+  margin-bottom: 10px;
+}
+
+.arrowDown {
+  margin-left: 10px;
 }
