@@ -50,25 +50,29 @@ body {
 }
 
 .message {
-  position: relative;
+  height: 20px;
+  margin-top: 10px;
+  animation: size 0.2s 2 alternate;
+  display: flex;
+  align-items: center;
 }
 
-.App p {
-  margin-top: 5px;
+.messageTwo {
+  height: 20px;
+  margin-top: 10px;
+  animation: sizetwo 0.2s 2 alternate;
+  display: flex;
+  align-items: center;
 }
 
 .checkMark {
-  position: absolute;
-  right: -22px;
-  bottom: 0;
   color: lightgreen;
+  margin-left: 5px;
 }
 
 .crossMark {
-  position: absolute;
-  right: -18px;
-  bottom: -2px;
   color: rgb(255, 73, 73);
+  margin-left: 5px;
 }
 
 .descriptionBoxClosed {
@@ -131,4 +135,28 @@ body {
 
 .arrowDown {
   margin-left: 10px;
+}
+
+@keyframes size {
+  0% {
+    font-size: 1rem;
+  }
+  100% {
+    font-size: 1.2rem;
+  }
+  0% {
+    font-size: 1rem;
+  }
+}
+
+@keyframes sizetwo {
+  0% {
+    font-size: 1rem;
+  }
+  100% {
+    font-size: 1.21rem;
+  }
+  0% {
+    font-size: 1rem;
+  }
 }

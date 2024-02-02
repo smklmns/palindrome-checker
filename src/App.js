@@ -7,6 +7,7 @@ function App() {
   const [text, setText] = useState('')
   const [success, setSuccess] = useState(null)
   const [error, setError] = useState(null)
+  const [classname, setClassname] = useState('')
 
   const palindromeChecker = (e) => {
     e.preventDefault()
@@ -42,8 +43,13 @@ function App() {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <Message success={success} error={error}/>
-      <button className="checkButton" type="submit">Check</button>
+      <Message classname={classname} success={success} error={error}/>
+      <button 
+        onClick={() => setClassname(classname === "message" ? "messageTwo" : "message")} 
+        className="checkButton" 
+        type="submit">
+        Check
+      </button>
       <Description />
     </form>
     
